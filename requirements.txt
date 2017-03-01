@@ -1,0 +1,5 @@
+Django==1.6
+feedparser==5.2.1
+gunicorn==0.14.2
+requests==2.13.0
+South==1.0.2

@@ -1,0 +1,59 @@
+{% extends "auth/base.html" %}
+
+{% block content %}
+
+
+    <!<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Register</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    </head>
+     
+    <body>
+    <div align="center">
+    <div class="container">
+    <form class="form-horizontal" id="registration" method='post'  action="/accounts/register/" >{% csrf_token %}
+    <fieldset>
+    <legend>Registration Form</legend>
+    <div class="control-group">
+    <label class="control-label">Username:</label>
+    <div class="controls">
+    <p>  username: {{ form.username}}</p>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label">Password:</label>
+    <div class="controls">
+    <p>password: {{ form.password1}} </p>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label">Password:</label>
+    <div class="controls">
+    <p>confirm : {{ form.password2}} </p>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label">Email</label>
+    <div class="controls">
+    <p> email id: {{ form.email}} </p>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label"></label>
+    <div class="controls">
+    <button type="submit" class="btn btn-success" >Submit</button>
+    </div>
+    </div>
+    </div>
+    </fieldset>
+    </form>
+    </div>
+    </body>
+    </html>
+
+  
+{% endblock content %}
